@@ -76,7 +76,10 @@ export default function AssignmentReader({ assignment, onBack }: AssignmentReade
         <div className="document-stage">
           {status === 'loading' && <div className="document-message"><LoaderCircle className="animate-spin text-primary" /><p>Đang dựng nội dung và hình ảnh của tài liệu...</p></div>}
           {status === 'error' && <div className="document-message"><FileText className="text-primary" /><p>Trình duyệt chưa thể hiển thị file này. Bạn vẫn có thể tải file gốc bằng nút phía trên.</p></div>}
-          <div ref={containerRef} className={`docx-render ${status === 'ready' ? 'block' : 'hidden'}`} />
+          <div
+            ref={containerRef}
+            className={`docx-render ${assignment.id === 3 ? 'hide-first-doc-page' : ''} ${status === 'ready' ? 'block' : 'hidden'}`}
+          />
         </div>
       </section>
 

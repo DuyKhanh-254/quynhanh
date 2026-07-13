@@ -21,7 +21,7 @@ export default function HomeView({ setTab }: HomeViewProps) {
           <div>
             <p className="uppercase tracking-[0.24em] text-[11px] md:text-xs font-bold text-[#aa6578] mb-3">Ngôn ngữ Hàn Quốc · ULIS</p>
             <h1 className="font-headline text-[44px] sm:text-6xl md:text-[68px] font-bold leading-[1.04] text-on-background">
-              Nguyễn Đặng<br /><span className="serif-accent text-primary italic font-medium">Quỳnh Anh</span>
+              Nguyễn Đặng<br /><span className="text-primary">Quỳnh Anh</span>
             </h1>
           </div>
           <p className="text-base md:text-lg text-on-surface-variant leading-8 max-w-2xl">

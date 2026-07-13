@@ -54,7 +54,6 @@ export default function AssignmentsView({ onOpen }: AssignmentsViewProps) {
 
       <div className="rounded-[28px] bg-[#3c2930] text-white p-7 md:p-9 flex flex-col md:flex-row items-center justify-between gap-5">
         <div><p className="text-xs uppercase tracking-[.2em] text-[#f1a9bd] font-bold">Learning archive</p><h3 className="font-headline text-2xl font-bold mt-1">Sáu bài tập · Một hành trình trưởng thành</h3></div>
-        <p className="text-sm text-white/65 max-w-xl leading-6">Các file gốc được giữ nguyên để đảm bảo đầy đủ văn bản, bảng biểu, đường dẫn và hình ảnh minh họa.</p>
       </div>
     </div>
   );

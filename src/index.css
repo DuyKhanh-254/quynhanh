@@ -142,6 +142,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .docx-render .docx-wrapper { background: #eee9e7 !important; padding: 20px 0 !important; }
 .docx-render section.docx-page { margin: 0 auto 22px !important; box-shadow: 0 14px 35px rgba(47,32,38,.16) !important; }
 .docx-render img { max-width: 100%; }
+.docx-render.hide-first-doc-page section.docx-page:first-of-type { display: none !important; }
 
 .lesson-card { display: flex; gap: 1.25rem; align-items: flex-start; border-radius: 1.8rem; padding: 1.65rem; background: linear-gradient(135deg, #f9dce5, #f3edf9); border: 1px solid white; box-shadow: 0 20px 45px -25px rgba(125,69,86,.32); }
 

@@ -4,10 +4,10 @@ import { ArrowLeft, BrainCircuit, Heart, Scale, Sparkles } from 'lucide-react';
 export default function ThankYouView({ onHome }: { onHome: () => void }) {
   return (
     <div className="space-y-12">
-      <section className="text-center max-w-3xl mx-auto pt-4">
+      <section className="text-center max-w-5xl mx-auto pt-4">
         <p className="section-kicker">Final reflection</p>
         <h1 className="font-headline text-4xl md:text-6xl font-bold leading-tight mt-3">Một hành trình<br /><span className="serif-accent text-primary italic font-medium">hoàn thiện bản thân</span></h1>
-        <p className="text-on-surface-variant leading-7 mt-5">Những thay đổi, trải nghiệm và suy ngẫm mình giữ lại sau học phần Công nghệ số và Trí tuệ nhân tạo.</p>
+        <p className="text-sm md:text-base text-on-surface-variant leading-7 mt-5">Những thay đổi, trải nghiệm và suy ngẫm mình giữ lại sau học phần Công nghệ số và Trí tuệ nhân tạo.</p>
       </section>
 
       <section className="reflection-grid">
@@ -42,7 +42,7 @@ export default function ThankYouView({ onHome }: { onHome: () => void }) {
       </section>
 
       <section className="rounded-[34px] bg-gradient-to-r from-[#f8d6e0] via-white to-[#eee6fa] p-8 md:p-12 text-center border border-white shadow-kawaii-card">
-        <p className="serif-accent text-3xl md:text-5xl italic text-primary">“Công nghệ có ý nghĩa khi giúp mình học sâu hơn, sáng tạo tốt hơn và hành động có trách nhiệm hơn.”</p>
+        <p className="serif-accent text-3xl md:text-4xl lg:text-[42px] leading-[1.35] italic text-primary">“Công nghệ có ý nghĩa khi giúp mình học sâu hơn, sáng tạo tốt hơn và hành động có trách nhiệm hơn.”</p>
         <button onClick={onHome} className="btn-primary mt-8 mx-auto"><ArrowLeft size={17} /> Trở về trang chủ</button>
       </section>
     </div>
