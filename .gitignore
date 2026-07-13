@@ -1,0 +1,12 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+/a1.jpg
+/a2.jpg
+/BT*.docx
+/assets/
+/metadata.json

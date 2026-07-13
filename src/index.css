@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,500;1,600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --font-headline: "Be Vietnam Pro", ui-sans-serif, system-ui, sans-serif;
+  --color-primary: #9a596b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #f6c9d6;
+  --color-on-primary-container: #6e3e4b;
+  --color-secondary: #77666b;
+  --color-secondary-container: #eee4e7;
+  --color-background: #fff9fa;
+  --color-on-background: #302328;
+  --color-on-surface-variant: #65575c;
+  --color-surface-variant: #ebdfe2;
+  --color-surface-container-low: #fff0f4;
+  --shadow-kawaii-card: 0 22px 55px -22px rgba(148, 78, 98, .25);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #fff9fa; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+@layer utilities {
+  .bg-pattern {
+    background-image:
+      radial-gradient(circle at 15% 9%, rgba(247, 196, 211, .38), transparent 25%),
+      radial-gradient(circle at 89% 33%, rgba(224, 210, 247, .38), transparent 25%),
+      radial-gradient(circle at 46% 88%, rgba(214, 240, 234, .35), transparent 25%),
+      radial-gradient(rgba(209, 181, 189, .32) 1px, transparent 1px);
+    background-size: auto, auto, auto, 26px 26px;
+  }
+
+  .serif-accent { font-family: "Playfair Display", Georgia, serif; }
+
+  .animate-float { animation: float 4.8s ease-in-out infinite; }
+  .animate-float-reverse { animation: float-reverse 5.2s ease-in-out infinite; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-10px) rotate(4deg); }
+}
+
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(9px) rotate(-4deg); }
+}
+
+.profile-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .62rem .9rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,.78);
+  border: 1px solid #ebdfe2;
+  color: #65575c;
+  font-size: .75rem;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(75,45,54,.05);
+}
+
+.btn-primary, .btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  border-radius: 999px;
+  padding: .85rem 1.45rem;
+  font-size: .86rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn-primary {
+  color: white;
+  background: #9a596b;
+  box-shadow: 0 6px 0 #794554, 0 13px 25px rgba(122,65,82,.18);
+}
+.btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 0 #794554, 0 16px 28px rgba(122,65,82,.22); }
+.btn-primary:active { transform: translateY(3px); box-shadow: 0 2px 0 #794554; }
+
+.btn-secondary {
+  color: #7a4957;
+  background: rgba(255,255,255,.78);
+  border: 1px solid #e7d7dc;
+  box-shadow: 0 8px 22px rgba(70,44,52,.07);
+}
+.btn-secondary:hover { transform: translateY(-3px); background: white; }
+
+.section-kicker {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: .68rem;
+  font-weight: 800;
+  color: #9a596b;
+}
+
+.section-title {
+  margin-top: .35rem;
+  color: #302328;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: background .2s ease, transform .2s ease;
+}
+.contact-row:hover { background: rgba(255,255,255,.14); transform: translateX(4px); }
+.contact-row span { display: grid; gap: .18rem; font-size: .88rem; font-weight: 700; }
+.contact-row small { color: rgba(255,255,255,.55); font-size: .65rem; text-transform: uppercase; letter-spacing: .14em; }
+
+.assignment-card {
+  min-height: 470px;
+  padding: 1.6rem;
+  border-radius: 1.75rem;
+  background: rgba(255,255,255,.78);
+  border: 1px solid white;
+  box-shadow: 0 20px 50px -24px rgba(132,75,91,.3);
+  transition: box-shadow .3s ease;
+}
+.assignment-card:hover { box-shadow: 0 30px 60px -24px rgba(132,75,91,.38); }
+.assignment-number { display: inline-flex; align-items: center; justify-content: center; width: 2.7rem; height: 2.7rem; border-radius: 999px; font-weight: 800; font-size: .78rem; }
+
+.document-shell { border-radius: 1.65rem; background: white; border: 1px solid #eadde1; box-shadow: 0 28px 70px -30px rgba(75,44,53,.3); overflow: hidden; }
+.document-stage { min-height: 540px; background: #eee9e7; overflow-x: auto; padding: 1rem; }
+.document-message { min-height: 500px; display: flex; flex-direction: column; gap: 1rem; align-items: center; justify-content: center; text-align: center; color: #65575c; padding: 2rem; }
+.docx-render { min-width: min-content; }
+.docx-render .docx-wrapper { background: #eee9e7 !important; padding: 20px 0 !important; }
+.docx-render section.docx-page { margin: 0 auto 22px !important; box-shadow: 0 14px 35px rgba(47,32,38,.16) !important; }
+.docx-render img { max-width: 100%; }
+
+.lesson-card { display: flex; gap: 1.25rem; align-items: flex-start; border-radius: 1.8rem; padding: 1.65rem; background: linear-gradient(135deg, #f9dce5, #f3edf9); border: 1px solid white; box-shadow: 0 20px 45px -25px rgba(125,69,86,.32); }
+
+.reflection-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 1.25rem; }
+.reflection-card { grid-column: span 12; padding: 1.8rem; border-radius: 1.9rem; border: 1px solid rgba(255,255,255,.85); box-shadow: 0 22px 55px -28px rgba(96,55,67,.3); }
+.reflection-icon { display: flex; align-items: center; justify-content: center; width: 3rem; height: 3rem; border-radius: 1rem; background: white; color: #9a596b; box-shadow: 0 7px 18px rgba(100,55,68,.09); margin-bottom: 1.6rem; }
+.reflection-title { font-size: clamp(1.45rem, 3vw, 2.25rem); line-height: 1.2; font-weight: 800; margin-top: .45rem; }
+.reflection-card > p:last-of-type { color: #65575c; line-height: 1.75; margin-top: 1rem; font-size: .94rem; }
+
+@media (max-width: 700px) {
+  .document-stage { padding: .4rem; }
+  .docx-render .docx-wrapper { padding: 8px 0 !important; transform-origin: top left; }
+  .lesson-card { flex-direction: column; }
+}
